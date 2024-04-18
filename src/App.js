@@ -18,8 +18,12 @@ import CareersLayout from "./layouts/CareersLayout";
 //loaders
 import { careersLoader } from "./loaders/CareersLoader";
 import { careerDetailsLoader } from "./loaders/CareerDetailsLoader";
+
+//formActions
 import { contactAction } from "./formActions/ContactAction";
 
+//providers
+import ThemeContextProvider from "./contexts/ThemeContext";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -41,7 +45,9 @@ const router = createBrowserRouter(
 
 function App() {
   return (
-    <RouterProvider router={router}/>
+    <ThemeContextProvider>
+        <RouterProvider router={router}/>
+    </ThemeContextProvider>
   );
 }
 
