@@ -22,8 +22,6 @@ import { careerDetailsLoader } from "./loaders/CareerDetailsLoader";
 //formActions
 import { contactAction } from "./formActions/ContactAction";
 
-//providers
-import ThemeContextProvider from "./contexts/ThemeContext";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -45,9 +43,7 @@ const router = createBrowserRouter(
 
 function App() {
   return (
-    <ThemeContextProvider>
-        <RouterProvider router={router}/>
-    </ThemeContextProvider>
+    <RouterProvider router={router}/>
   );
 }
 

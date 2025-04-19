@@ -1,5 +1,5 @@
 export const careersLoader = async () => {
-  const response =  await fetch('http://localhost:4000/careers');
+  const response =  await fetch('https://dummyjson.com/posts');
   if(!response.ok){
       throw Error("Could not fetch the careers")
   }
