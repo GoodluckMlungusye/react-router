@@ -6,4 +6,6 @@ export const careerDetailsLoader = async ({params}) => {
         throw Error('Could not find that career')
      }
      return response.json();
+
+
 }
